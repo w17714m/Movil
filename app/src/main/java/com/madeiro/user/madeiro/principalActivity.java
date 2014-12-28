@@ -19,7 +19,7 @@ public class principalActivity extends ActionBarActivity implements View.OnClick
     }
 
     private void inicializarBotones(){
-        btn = (Button) findViewById(R.id.btnCambiar);
+        btn = (Button) findViewById(R.id.btnAceptar);
         btn.setOnClickListener(this);
     }
 
@@ -50,7 +50,7 @@ public class principalActivity extends ActionBarActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         Intent i = new Intent(getApplicationContext(),navegacion.class);
-       if(v.getId()==findViewById(R.id.btnCambiar).getId()){
+       if(v.getId()==findViewById(R.id.btnAceptar).getId()){
            startActivity(i);
        }
     }

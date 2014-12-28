@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -9,21 +10,90 @@
     tools:context=".principalActivity"
     >
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:background="@drawable/urb"/>
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
-        <TextView android:id="@+id/text"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n\n\n\n"></TextView>
+
+
+     <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Usuario"/>
+
+     <EditText
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/etUsuario"
+     android:layout_weight="1"
+     android:textSize="15dp"/>
+
+
+     </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.09">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello, I am a TextView" />
-        <Button android:id="@+id/button"
+            android:text="Password"/>
+
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello, I am a Button" />
+            android:id="@+id/etPass"
+            android:layout_weight="1"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:id="@+id/btnAceptar"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:id="@+id/btnCancelar"/>
+
     </LinearLayout>
 
 
-</LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
